@@ -1,0 +1,16 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+  /* centering the block */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* need to put in the height for it to work */
+  height: 100%;
+}
+canvas {
+  display: block;
+  /* outline: 5px solid rgb(0, 0, 0); */
+}
