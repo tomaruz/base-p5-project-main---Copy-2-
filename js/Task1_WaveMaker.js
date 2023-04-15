@@ -1,19 +1,38 @@
 let t = 0; // time variable
 
+let paused = false;
+
+//fade in effect
+var fade;
+var fadeAmount = 10;
+
 //adding music
-const playPauseButton = document.getElementById('button');
-const audio = new Audio("wave_maker_audio.mp3");
+// const playPauseButton = document.getElementById('button');
+const audio = new Audio("/audio/wave_maker_audio.mp3");
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
-  fill(255);
+  fade = 0; // fade set to 0 = animation is invisable
 }
+
+// when window loads: do not play animation and do not show animation
+window.addEventListener("load", () => {
+  noLoop();
+  background(10);
+});
 
 
 function draw() {
   background(10, 10); // translucent background (creates trails)
+  
+  //when animation first starts, it gradually fades in
+  fill(255, fade)
 
+  if (fade < 0) fadeAmount; //checks if the value of fade is 0
+ 
+  fade += fadeAmount;
+  
   // make a x and y grid of ellipses
   translate(width / 2 - 200, height / 2 - 200); // positioning art in the middle of canvas
   for (let x = 0; x <= 400; x = x + 40) { // 400 wide and + 40 to create 10 gap between each particle as each particle is 30
@@ -31,17 +50,22 @@ function draw() {
   }
 
   t = t + 0.004; // update time 
+
 }
 
-window.onresize = function(){ location.reload(); } // refreshes page on resize to avoid a white border around canvas
+window.onresize = function () { location.reload(); } // refreshes page on resize to avoid a white border around canvas
 
 
-//adding music when the button is clicked
+//adding music
+//pausing and playing animation
 function mousePressed() {
   if (audio.paused) {
     audio.play();
-}
-else {
+    loop();
+    fill(255);
+  }
+  else {
     audio.pause();
-}
+    noLoop();
+  }
 }

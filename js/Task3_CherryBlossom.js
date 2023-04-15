@@ -1,6 +1,8 @@
 let brown1;
 let brown2;
 
+
+
 function setup() {
     createCanvas(windowWidth, windowHeight);
     angleMode(DEGREES);
@@ -122,5 +124,7 @@ function branch(len) {
     }
 
 }
+
+window.onresize = function () { location.reload(); } // refreshes page on resize to avoid a white border around canvas
 
 

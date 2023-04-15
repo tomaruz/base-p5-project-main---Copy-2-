@@ -9,7 +9,7 @@ let maxAngle;
 let trail = []; //an empty array for the cursor circles
 
 //adding a sound effect when mouse is pressed
-const audio = new Audio("mixkit-plastic-bubble-click-1124.mp3");
+const audio = new Audio("/audio/mixkit-plastic-bubble-click-1124.mp3");
 
 //creating variables for a function that toggles between white and black modes
 let black = 0;
