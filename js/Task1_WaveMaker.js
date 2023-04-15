@@ -1,10 +1,15 @@
 let t = 0; // time variable
 
+//adding music
+const playPauseButton = document.getElementById('button');
+const audio = new Audio("wave_maker_audio.mp3");
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
   fill(255);
 }
+
 
 function draw() {
   background(10, 10); // translucent background (creates trails)
@@ -26,4 +31,17 @@ function draw() {
   }
 
   t = t + 0.004; // update time 
+}
+
+window.onresize = function(){ location.reload(); } // refreshes page on resize to avoid a white border around canvas
+
+
+//adding music when the button is clicked
+function mousePressed() {
+  if (audio.paused) {
+    audio.play();
+}
+else {
+    audio.pause();
+}
 }

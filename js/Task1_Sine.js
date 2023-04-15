@@ -89,3 +89,5 @@ function mousePressed() {
     audio.play();
   }
 }
+
+window.onresize = function(){ location.reload(); } // refreshes page on resize to avoid a white border around canvas
