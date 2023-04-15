@@ -8,6 +8,9 @@ let frequency; //the number of waves produced per unit of time
 let maxAngle;
 let trail = []; //an empty array for the cursor circles
 
+//adding a sound effect when mouse is pressed
+const audio = new Audio("mixkit-plastic-bubble-click-1124.mp3");
+
 //creating variables for a function that toggles between white and black modes
 let black = 0;
 let white = 255;
@@ -78,9 +81,11 @@ function mousePressed() {
   if (backgroundColor == black) {
     backgroundColor = white
     circleColor = black
+    audio.play();
   }
   else {
     backgroundColor = black
     circleColor = white
+    audio.play();
   }
 }
