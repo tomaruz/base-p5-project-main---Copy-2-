@@ -6,6 +6,7 @@ function setup() {
     let colours = [color('#251f3a'), color('#deb210'), color('#dbd9d7'), color('#ce3219'), color('#324494')]; // color array
     createCanvas(800, 800);
 
+
     //creating a grid
     while (y < height) {
 

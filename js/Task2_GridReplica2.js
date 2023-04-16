@@ -5,10 +5,11 @@ let y = 0;
 
 
 function setup() {
-
+    
+    // color array
     let colours = [color('#11304b'), color('#e1dbb4'), color('#ed9033'), color('#f9c554')];
     createCanvas(800, 800);
-    // color array
+
 
     //creating a grid
     while (y < height) {

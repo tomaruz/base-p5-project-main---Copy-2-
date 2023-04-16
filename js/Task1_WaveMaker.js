@@ -4,7 +4,7 @@ let paused = false;
 
 //fade in effect
 var fade;
-var fadeAmount = 10;
+var fadeAmount = 3;
 
 //adding music
 // const playPauseButton = document.getElementById('button');

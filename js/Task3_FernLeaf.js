@@ -69,6 +69,4 @@ function branch(len) { //len = length
 
 }
 
-
-
-
+window.onresize = function () { location.reload(); } // refreshes page on resize to avoid a white border around canvas

@@ -22,7 +22,7 @@ function draw() {
     background(252, 237, 247);
     resetMatrix();
     translate(width / 2, height) //translating the drawing point to the middle of screen, at the the bottom. Otherwise, it would draw from the top left corner.
-    branch(170);
+    branch(180);
 
 }
 
